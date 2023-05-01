@@ -70,3 +70,27 @@ void SongCollection::loadSongs()
         m_loadNextSong();
 }
 
+const std::vector<Song> &SongCollection::getSongs()
+{
+    return m_songs;
+}
+
+
+std::set<std::string> SongCollection::getUniqueArtists()
+{
+    std::set<std::string> artists;
+    for (const auto &song : m_songs)
+        artists.insert(song.getArtist());
+
+    return artists;
+}
+
+std::unordered_multimap<std::string, std::string>  SongCollection::getArtistsSongs()
+{
+    std::unordered_multimap<std::string, std::string> artists;
+    for (const auto &song : m_songs)
+        artists.insert(std::make_pair(song.getArtist(), song.getTitle()));
+
+    return artists;
+}
+

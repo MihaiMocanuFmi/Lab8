@@ -1,7 +1,9 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <set>
 #include <fstream>
+#include <unordered_map>
 
 #include "Song.h"
 
@@ -24,5 +26,8 @@ public:
     ~SongCollection();
 
     void loadSongs();
+    const std::vector<Song> &getSongs();
+    std::set<std::string> getUniqueArtists();
+    std::unordered_multimap<std::string, std::string> getArtistsSongs();
 
 };
