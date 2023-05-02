@@ -59,28 +59,27 @@ void printResultFor7(std::vector<Song> songs)
 
 }
 
+#include <chrono>
 void problem8(const SongCollection &collection)
 {
+    auto timerStart = std::chrono::high_resolution_clock::now();
+
     std::multimap<std::string, std::string> map;
 
     for (const auto &song : collection.getSongs())
-        for (const auto &word : song.getLyrics())
-        {
-            const auto & pairIt = map.equal_range(word);
-            bool songExists = false;
-            for (auto it = pairIt.first; it != pairIt.second; ++it)
-            {
-                if (it->second == song.getTitle())
-                {
-                    songExists = true;
-                    break;
-                }
-            }
+    {
+        std::set<std::string> uniqueWords;
+        for (const auto &word: song.getLyrics())
+            uniqueWords.insert(word);
 
-            if (not songExists)
-                map.insert(std::make_pair(word, song.getTitle()));
-        }
 
+        for (const auto &word: uniqueWords)
+            map.insert(std::make_pair(word, song.getTitle()));
+    }
+    auto timerStop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(timerStop - timerStart);
+
+    std::cout << "DURATION: \t" << duration.count() << "\tmilliseconds" << std::endl;
     bool stop;
 
     do
