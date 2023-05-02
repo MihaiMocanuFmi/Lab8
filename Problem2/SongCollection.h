@@ -26,8 +26,8 @@ public:
     ~SongCollection();
 
     void loadSongs();
-    const std::vector<Song> &getSongs();
-    std::set<std::string> getUniqueArtists();
-    std::unordered_multimap<std::string, std::string> getArtistsSongs();
+    const std::vector<Song> &getSongs() const;
+    std::set<std::string> getUniqueArtists() const ;
+    std::unordered_multimap<std::string, std::string> getArtistsSongs() const;
 
 };

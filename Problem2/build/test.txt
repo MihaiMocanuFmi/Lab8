@@ -1,0 +1,110 @@
+ARTIST="Jessica Simpson"
+TITLE="My Wonderful"
+LYRICS="''A time when I was down and out
+No lovin in my life
+this angel came and brought about
+a meaning of some right
+Took my dark and lonely days
+Into the light
+With his loving ways
+
+He's my wonderful
+Everything a girl could want
+to love
+And all I need
+Yes he's my wonderful
+Must have been sent from
+up above
+Just for me
+
+Gotta have him close
+to me
+Each and every night
+To give me that security
+Of dreaming in delight
+Love has got a grip on me
+Oh so tight
+Hope he never lets go
+
+He's my wonderful
+Everything a girl could want
+to love
+And all I need
+Yes he's my wonderful
+Must have been sent from
+up above
+Just for me
+
+Cause I don't ever want to be free
+From this love and care that
+most people will never see
+And at night I pray
+That I'll have my way
+And enjoy love for eternity
+
+He's my wonderful
+Everything a girl could want
+to love
+And all I need
+Yes he's my wonderful
+Must have been sent from
+up above
+Just for me
+
+No one can ever do for me
+The things he does cause
+
+He's my wonderful
+Everything a girl could want
+to love
+And all I need
+Yes he's my wonderful
+Must have been sent from
+up above
+Just for me''
+"
+ARTIST="John Lennon"
+TITLE="Just Because"
+LYRICS="''Ah, remember this?
+Why, I must have been thirteen when this came out!
+Or was it fourteen?
+Or was it twenty-two?
+I could have been twelve actually.''
+
+just because you left and said goodbye,
+do you think that I will sit and cry?
+Even if my heart should tell me so,
+darling, I would rather let you go.
+
+Just because I want someone who's kind,
+with a heart as good and pure as mine.
+But maybe I am asking for too much,
+darling, please don't ever break my heart.
+
+I know you think you're smart,
+just runnin' around breaking lovers hearts.
+
+Just because you left and said goodbye, hey!
+Do you think that I will sit and cry?
+Even if my heart should tell me so,
+darling, I would rather let you go.
+
+Uh-uh-uh -
+
+''this is doctor winston o'boggie saying goodnight
+from record plant east, new york.
+We hope you had a swell time!
+Ev'rybody here says ''hi''.
+Goodbye.''
+
+just because you left and said goodbye,
+do you think that I will sit and cry?
+Even if my heart should tell me so,
+darling, I would rather let you go.
+
+Uh-uh-uh -
+goodbye!
+Uh-uh-uh-uh-uh -
+so long!
+Been a long year!
+"

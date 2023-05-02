@@ -18,12 +18,14 @@ std::string SongCollection::m_findFirstVariable(const std::string &variable, boo
         result.erase(result.begin(), result.begin() + variable.length());
 
         std::string line;
-        //while the line does not end with _"_ right before the "Carriage Return", we need to continue reading
-        while(result.at(result.length() - 2) != '"' and std::getline(m_inputFile, line) )
-            result += line;
+        //while the line does not end with _"_ right before the "Carriage Return" if it exists, we need to continue reading
+        while((result.at(result.length() - 2) != '"' and result.at(result.length() - 1) != '"') and std::getline(m_inputFile, line) )
+            result += ' ' + line;
 
-        //we delete the \n (or \r = "Carriage Rerturn" in this case) at the end of the file
-        result.erase(result.length() - 1);
+        //we delete the \r = "Carriage Return" in this case if it exists at the end of the file and append a space
+        if (result.at(result.length() - 1) != '"')
+            result.erase(result.length() - 1);
+
 
         //we remove the last _"_
         result.erase(result.length() - 1);
@@ -70,13 +72,13 @@ void SongCollection::loadSongs()
         m_loadNextSong();
 }
 
-const std::vector<Song> &SongCollection::getSongs()
+const std::vector<Song> &SongCollection::getSongs() const
 {
     return m_songs;
 }
 
 
-std::set<std::string> SongCollection::getUniqueArtists()
+std::set<std::string> SongCollection::getUniqueArtists() const
 {
     std::set<std::string> artists;
     for (const auto &song : m_songs)
@@ -85,7 +87,7 @@ std::set<std::string> SongCollection::getUniqueArtists()
     return artists;
 }
 
-std::unordered_multimap<std::string, std::string>  SongCollection::getArtistsSongs()
+std::unordered_multimap<std::string, std::string>  SongCollection::getArtistsSongs() const
 {
     std::unordered_multimap<std::string, std::string> artists;
     for (const auto &song : m_songs)
